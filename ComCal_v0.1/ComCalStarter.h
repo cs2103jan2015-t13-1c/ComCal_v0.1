@@ -41,8 +41,8 @@ const std::string FILENAME_DONEDEFAULT = "ComCal_done.txt";
 const std::string FILENAME_LOGDEFAULT = "ActivityLog.txt";
 
 //Number of file name arguments constant int declarations:
-const int NOFILENAMEENTERED = 1;
-const int TODOFILENAMEENTERED = 2;
+const int NOFILENAMEENTERED = 0;
+const int TODOFILENAMEENTERED = 1;
 
 //Welcome messages constant string declarations:
 const std::string MESSAGE_TODODEFAULTFILENAMECONFIRMATION = "Working on default todo file: " + FILENAME_TODODEFAULT;
