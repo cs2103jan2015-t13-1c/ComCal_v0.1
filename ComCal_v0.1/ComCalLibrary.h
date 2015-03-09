@@ -1,0 +1,5 @@
+#include "Exceptions.h"
+#include "SearchClause.h"
+#include "Task.h"
+#include "Manipulator.h"
+#include "TextManipulator.h"
