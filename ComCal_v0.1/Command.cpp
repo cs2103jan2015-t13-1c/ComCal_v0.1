@@ -12,6 +12,7 @@ Command::Command(Manipulator* todoTMPtr, Manipulator* doneTMPtr) {
 Command::~Command(void) {
 }
 
+
 std::string Command::executeInput(std::string) {
 	std::string virtualString;
 	return virtualString;

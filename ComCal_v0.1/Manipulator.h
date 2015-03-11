@@ -9,7 +9,7 @@
 
 class Manipulator
 {
-protected:
+public:
 	std::string _fileName;
 
 public:
@@ -20,6 +20,6 @@ public:
 
 	virtual void append(Task);
 	virtual void write(std::vector<Task>);
-	virtual std::vector<Task> read(void);
+	virtual std::vector<Task> read(void); 
 	virtual void sort();
 };

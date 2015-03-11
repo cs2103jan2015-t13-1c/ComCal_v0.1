@@ -1,4 +1,6 @@
 #include "Add.h"
+#include "ComCalLibrary.h"
+#include "ComCalStarter.h"
 
 Add::Add(Manipulator* todoTMPtr, Manipulator* doneTMPtr) : Command(todoTMPtr, doneTMPtr) {
 	_attributeKeywords.assign(ATTRIBUTEKEYWORDSARRAY, ATTRIBUTEKEYWORDSARRAY + ATTRIBUTEKEYWORDSARRAYSIZE);
@@ -239,7 +241,7 @@ std::string Add::executeInput(std::string userInput) {
 	process(userInput);
 
 	std::vector<Task> contents;
-	contents = _todoTMPtr->read();
+	contents = _todoTMPtr->read(); // where shit goes down
 
 	for (unsigned int i = 0; i < contents.size(); i++) {
 		if (contents[i].getCode() != TASKTYPECODE_INVALID && contents[i].getDescription() == _description && contents[i].getStartDateTime() == _startDateTime && contents[i].getEndDateTime() == _endDateTime && contents[i].getLocation() == _location) {

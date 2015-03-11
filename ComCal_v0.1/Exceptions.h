@@ -4,7 +4,7 @@
 #include <exception>
 
 //Help message header and line spacing strings:
-const std::string HEADER_HELP = "\n ===============================  TAC.exe HELP  ===============================";
+const std::string HEADER_HELP = "\n ===============================  ComCal.exe HELP  ===============================";
 const std::string LINESPACING_SINGLE = "\n";
 const std::string LINESPACING_DOUBLE = "\n\n";
 

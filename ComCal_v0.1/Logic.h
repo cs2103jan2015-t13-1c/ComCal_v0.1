@@ -22,7 +22,7 @@ for the implementation fo undo and redo
 #include <stack>
 
 //Thank you message string:
-static const std::string MESSAGE_THANKYOU = "Thank you for using TAC, do come back soon! Good bye!";
+static const std::string MESSAGE_THANKYOU = "Thank you for using ComCal, do come back soon! Good bye!";
 
 enum CommandType {
 	ADD,

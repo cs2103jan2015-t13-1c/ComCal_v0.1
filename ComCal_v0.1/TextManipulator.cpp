@@ -34,7 +34,7 @@ std::vector<Task> TextManipulator::read(void){
 	std::vector<Task> taskVector;
 	int taskIndex = 0;
 
-	inFile.open(_fileName);
+	inFile.open(_fileName); //_fileName from Manipulator class
 
 	try {
 		while (getline(inFile, sentence)) {

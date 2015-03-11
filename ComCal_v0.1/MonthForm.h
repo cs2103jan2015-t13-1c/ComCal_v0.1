@@ -1,6 +1,7 @@
 #pragma once
 #include "Logic.h"
 #include "ComCalStarter.h"
+#include "ComCalLibrary.h"
 
 namespace ComCal_v01 {
 

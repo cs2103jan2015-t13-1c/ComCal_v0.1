@@ -108,7 +108,7 @@ static const int CONSOLE_WIDTH = 80;
 
 class Command
 {
-protected:
+public:
 	Manipulator* _todoTMPtr;
 	Manipulator* _doneTMPtr;
 
@@ -258,7 +258,7 @@ private:
 	//_displayTaskIndexes stores the indexes that was last shown or searched
 	static std::vector<int> _displayedTasksIndexes;
 
-	//@author A0080917B
+	
 	/***************************************************************************************************************************
 	Name: get<time type>Time
 	Type: Methods

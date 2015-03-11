@@ -7,8 +7,7 @@ using namespace ComCal_v01;
 using namespace System;
 using namespace System::Windows::Forms;
 
-MonthForm::MonthForm(int argc, array<String^>^ argv)
-{
+MonthForm::MonthForm(int argc, array<String^>^ argv){
 	InitializeComponent();
 
 	_startComCal = gcnew ComCalStarter();
@@ -28,9 +27,14 @@ System::Void MonthForm::userEnter(System::Object^  sender, System::Windows::Form
 	String^ feedBack;
 
 	if (e->KeyCode == Keys::Enter){
-		_startComCal->runLogic->executeCommand(convertStrTostr(userInputBox->Text), feedBackMessage);
+		if (userInputBox->Text == "exit" || userInputBox->Text == "close"){
+			Application::Exit();
+		}
+		else{
+			_startComCal->runLogic->executeCommand(convertStrTostr(userInputBox->Text), feedBackMessage);
 
-		feedBack = msclr::interop::marshal_as<String^>(feedBackMessage);
-		userInputBox->Text = nullptr;
+			feedBack = msclr::interop::marshal_as<String^>(feedBackMessage);
+//			userInputBox->Text = nullptr;
+		}
 	}
 }

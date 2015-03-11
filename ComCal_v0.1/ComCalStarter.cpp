@@ -35,8 +35,8 @@ void ComCalStarter::ComCalStarterInit(int numOfArg, array<System::String^>^ file
 	todoTMPtr = new TextManipulator(todoFileName);
 	doneTMPtr = new TextManipulator(doneFileName);
 
-//	prestartCheck(todoTMPtr);
-//	prestartCheck(doneTMPtr);
+	prestartCheck(todoTMPtr);
+	prestartCheck(doneTMPtr);
 //	printWelcomeMessage(todoFileName, doneFileName); //transfer this to the GUI
 
 	logPtr = new Logic(todoTMPtr, doneTMPtr);
@@ -56,6 +56,7 @@ void ComCalStarter::ComCalStarterInit(int numOfArg, array<System::String^>^ file
 void ComCalStarter::typeConversion(array<System::String^>^ fileNames, const char** strFilesNames, int numOfSpecifiedFiles){
 
 	msclr::interop::marshal_context^ context = gcnew msclr::interop::marshal_context();
+	strFilesNames = new const char*[numOfSpecifiedFiles];
 	for (int i = 0; i < numOfSpecifiedFiles; i++){
 		strFilesNames[i] = context->marshal_as<const char*>(fileNames[i]);
 
